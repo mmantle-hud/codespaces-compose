@@ -1,27 +1,8 @@
 {
-	"name": "PHP",
-	"build": {
-		"dockerfile": "Dockerfile",
-	},
-	"workspaceMount":"source=../,target=/var/www/html,type=bind,consistency=cached",
-
-	// Set *default* container specific settings.json values on container create.
-	//"settings": {
-	//	"terminal.integrated.shell.linux": "/bin/bash"
-	//},
-
-	// Add the IDs of extensions you want installed when the container is created.
-	//"extensions": [
-	//	"felixfbecker.php-debug",
-	//	"felixfbecker.php-intellisense"
-	//],
-
-	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	 "forwardPorts": [80],
-
-	// Use 'postCreateCommand' to run commands after the container is created.
-	//"postCreateCommand": "php -v",
-
-	// Comment out to connect as root instead.
-	//"remoteUser": "vscode"
+	"name":"Docker compose test",
+	"dockerComposeFile":["../docker-compose.yml","docker-compose.yml"],
+	"service":"web",
+	//"runServices":["database","web"],
+	"workspaceFolder":"/var/www/html",
+	 "forwardPorts": [81,8083],
 }
