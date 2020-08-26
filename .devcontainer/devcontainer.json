@@ -1,6 +1,6 @@
 {
 	"name":"Docker compose test",
-	"dockerComposeFile":["../docker-compose.yml","docker-compose.yml"],
+	"dockerComposeFile":["docker-compose.yml"],
 	"service":"web",
 	//"runServices":["database","web"],
 	"workspaceFolder":"/var/www/html",
