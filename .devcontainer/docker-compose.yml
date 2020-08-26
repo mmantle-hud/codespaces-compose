@@ -12,10 +12,3 @@ services:
       - ./datadir/:/var/lib/mysql
     ports:
       - "8083:3306"
-  web:
-    image: apache-php
-    container_name: mysite
-    volumes:
-      - ./src/:/var/www/html
-    ports:
-      - "81:80"
