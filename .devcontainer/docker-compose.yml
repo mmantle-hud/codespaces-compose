@@ -19,4 +19,4 @@ services:
     volumes:
       - ../src:/var/www/html
     links:
-      - 'mariadb'
+      - 'database'
