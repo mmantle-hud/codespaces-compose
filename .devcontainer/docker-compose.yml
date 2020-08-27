@@ -18,3 +18,4 @@ services:
       - MYSQL_PASSWORD=password
     volumes:
       - ../datadir/:/var/lib/mysql
+postStartCommand: "service apache2 start"
