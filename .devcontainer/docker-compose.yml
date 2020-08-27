@@ -1,5 +1,13 @@
 version: "3.1"
 services:
+  web:
+    image: php:7.2.1-apache
+    ports:
+      - 81:80
+    volumes:
+      - ../src:/var/www/html
+    links:
+      - 'database'
   database:
     image: mariadb:10.1
     container_name: mysite-mariadb
@@ -12,11 +20,3 @@ services:
       - ../datadir/:/var/lib/mysql
     ports:
       - "8083:3306"
-  web:
-    image: php:7.2.1-apache
-    ports:
-      - 81:80
-    volumes:
-      - ../src:/var/www/html
-    links:
-      - 'database'
