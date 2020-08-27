@@ -4,5 +4,5 @@
 	"service":"web",
 	"runServices":["database","web"],
 	"workspaceFolder":"/var/www/html",
-	"forwardPorts": [81,8083],
+	"forwardPorts": [80,3306],
 }
