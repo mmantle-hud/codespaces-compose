@@ -1,7 +1,7 @@
 {
 	"name":"Docker compose test",
 	"dockerComposeFile":["docker-compose.yml"],
-	"service":"database",
+	"service":"web",
 	"runServices":["database","web"],
 	"workspaceFolder":"/var/www/html",
 	"forwardPorts": [81,8083],
