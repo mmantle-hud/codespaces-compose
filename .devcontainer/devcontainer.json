@@ -4,6 +4,6 @@
 	"service":"web",
 	"runServices":["database","web"],
 	"workspaceFolder":"/var/www/html",
-	"forwardPorts": [80, 3306, 8081],
+	"forwardPorts": [80, 3306],
 	"postStartCommand": "service apache2 start",
 }
