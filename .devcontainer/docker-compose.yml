@@ -6,7 +6,6 @@ services:
     volumes:
       - ../src:/var/www/html
       - ./php.ini:/usr/local/etc/php/conf.d/php-docker.ini
-      - ../adminer:/var/www/html
     links:
       - 'database'
   database:
