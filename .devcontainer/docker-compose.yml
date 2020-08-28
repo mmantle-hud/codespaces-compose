@@ -9,8 +9,8 @@ services:
     links:
       - 'database'
   database:
-    image: mariadb:10.1
-    container_name: mariadb
+    image: mysql
+    container_name: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=password
       - MYSQL_DATABASE=mysite
