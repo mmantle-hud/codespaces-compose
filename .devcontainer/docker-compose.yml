@@ -1,26 +1,27 @@
 version: "3.1"
 services:
   web:
-    image: php:7.2.1-apache
+#    image: php:7.2.1-apache
+    build: Dockerfile
     container_name: web
     volumes:
       - ../src:/var/www/html
       - ./php.ini:/usr/local/etc/php/conf.d/php-docker.ini
-    links:
-      - 'database'
-  database:
-    image: mysql
-    container_name: mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=password
-      - MYSQL_DATABASE=mysite
-      - MYSQL_USER=mysite
-      - MYSQL_PASSWORD=password
-    volumes:
-      - ../datadir/:/var/lib/mysql
-  phpmyadmin:
-        image: phpmyadmin/phpmyadmin
-        links:
-            - 'database'
-        ports:
-            - 8081:80
+#    links:
+#      - 'database'
+#  database:
+#    image: mysql
+#    container_name: mysql
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=password
+#      - MYSQL_DATABASE=mysite
+#      - MYSQL_USER=mysite
+#      - MYSQL_PASSWORD=password
+#    volumes:
+#      - ../datadir/:/var/lib/mysql
+#  phpmyadmin:
+#        image: phpmyadmin/phpmyadmin
+#        links:
+#            - 'database'
+#        ports:
+#            - 8081:80
